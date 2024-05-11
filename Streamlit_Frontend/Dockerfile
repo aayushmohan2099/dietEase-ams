@@ -15,4 +15,4 @@ EXPOSE 8501
 
 ENTRYPOINT ["streamlit","run"]
 
-CMD ["Welcome to DietEase.py"]
+CMD ["Menu.py"]
