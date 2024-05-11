@@ -5,9 +5,38 @@ from random import uniform as rnd
 from ImageFinder.ImageFinder import get_images_links as find_image
 from streamlit_echarts import st_echarts
 
-st.set_page_config(page_title="Automatic Diet Recommendation", page_icon="💪",layout="wide")
+st.set_page_config(page_title="Automatic Diet Recommendation", page_icon="💪",layout="wide", initial_sidebar_state="collapsed")
 
 
+video_container_css = """
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+"""
+
+video_css = """
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+"""
+
+st.markdown(
+    """
+    <div style="{}">
+        <video autoplay muted loop style="{}">
+            <source src="https://cloudconvert-files.s3.eu-central-1.amazonaws.com/a584e468-9ee6-47e5-b184-be1ecd7ebd0d/bggbgbgb%20%281%29.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAI2WCZ54772T33JEQ%2F20240511%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20240511T160555Z&X-Amz-Expires=86400&X-Amz-Signature=2c8964a52d3cc816200021130ba6392be9774053c9ffa2886000d5822298b8c1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22bggbgbgb%20%281%29.mp4%22&response-content-type=video%2Fmp4&x-id=GetObject" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    """.format(video_container_css, video_css),
+    unsafe_allow_html=True
+)
 
 nutritions_values=['Calories','FatContent','SaturatedFatContent','CholesterolContent','SodiumContent','CarbohydrateContent','FiberContent','SugarContent','ProteinContent']
 # Streamlit states initialization

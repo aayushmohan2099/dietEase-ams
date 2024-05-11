@@ -7,7 +7,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# Define CSS styles for video container and content
 video_container_css = """
     position: fixed;
     top: 0;
