@@ -32,7 +32,7 @@ st.markdown(
     """
     <div style="{}">
         <video autoplay muted loop style="{}">
-            <source src="https://cloudconvert-files.s3.eu-central-1.amazonaws.com/a584e468-9ee6-47e5-b184-be1ecd7ebd0d/bggbgbgb%20%281%29.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAI2WCZ54772T33JEQ%2F20240511%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20240511T160555Z&X-Amz-Expires=86400&X-Amz-Signature=2c8964a52d3cc816200021130ba6392be9774053c9ffa2886000d5822298b8c1&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22bggbgbgb%20%281%29.mp4%22&response-content-type=video%2Fmp4&x-id=GetObject" type="video/mp4">
+            <source src="" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
     </div>
@@ -163,3 +163,18 @@ if st.session_state.generated:
         display.display_recommendation(st.session_state.recommendations)
     with st.container():
         display.display_overview(st.session_state.recommendations)
+
+st.markdown(
+    """
+    <div style="{}">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://i.ibb.co/hDTGxhm/Sign.png" alt="Signature" style="display: block; margin: 0 auto; width: 300px;">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
