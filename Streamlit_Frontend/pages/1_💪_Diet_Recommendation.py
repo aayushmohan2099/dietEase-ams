@@ -308,3 +308,18 @@ if st.session_state.generated:
         st.success('Recommendation Generated Successfully !', icon="✅")
     with st.container():
         display.display_meal_choices(st.session_state.person,st.session_state.recommendations)
+
+st.markdown(
+    """
+    <div style="{}">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://i.ibb.co/hDTGxhm/Sign.png" alt="Signature" style="display: block; margin: 0 auto; width: 300px;">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
